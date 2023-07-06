@@ -1,35 +1,54 @@
-import React from 'react'
+import React from 'react';
+import { Inter, Rubik } from '@next/font/google';
 
-type Props = {}
+export const title = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
-const MainContainer = (props: Props) => {
+export const text = Inter({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const MainContainer = () => {
   return (
-    <div style={{ height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ border: '3px solid red', padding: '6rem' }}> 
-      <div style={{ display: 'flex', border: '3px solid orange', padding: '6rem' }}> </div>
-    <div style={{ border: '2px solid blue', padding: '1rem' }}>
-      <div style={{ display: 'flex-end', justifyContent: 'center', alignItems: 'center' }}>
-        <span style={{display: 'flex-end', padding: '15rem' }}>Perfume</span>  
-      </div>
-      <div style={{display: ''}}>
-        <h1>Gabrielle Essence Eau De Parfum</h1>
-        
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
-       height: '40vh', width: '40vw', boxSizing: 'border-box', padding: '1rem' }}>
-        <h2>
-          A floral, solar and voluptuous interpretation composed by Olivier Polge,
-          Perfumer-Creator for the House of CHANEL.
-          <br /><br />
-          $149.99
-          <br />
-          $169.99
-        </h2>
+    <div style={{ height: '100vh', display: 'flex', width: '100vw',justifyContent: 'center', alignItems: 'center', backgroundColor: 'hsl(30, 38%, 92%' }}>
+        <div
+          style={{
+            borderRadius: '12px',
+            height: '60%',
+            width: '60%',
+            display: 'flex',
+            backgroundColor: 'white'
+          }}
+        >
+          <div style={{ height: '100%' }}>
+            <img src="/images/image-product-desktop.jpg" alt="Perfume" style={{ height: '100%',  borderRadius: '12px 0px 0px 12px'}} />
+          </div>
+          <div style={{  display: 'flex', flexDirection: 'column', padding: '10px' }}>
+            <div style={{height: '18%', display: 'flex', alignItems:'center',border: '2px solid red' }}>
+            <span style={{ letterSpacing: '0.3em' }}>PERFUME</span>
+            </div>
+            <h1 style={{ fontSize: '39px', width: '50%', overflow: 'auto' }}>Gabrielle Essence Eau De Parfum </h1>
+            <div style={{ fontFamily: 'montserrat', width: '50%', overflow: 'auto' }}>
+              <h4>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</h4>
+            </div>
+            <span style={{ fontFamily: 'fraunces', display: 'flex', fontSize: '25px',alignItems: 'center', textDecoration: 'underline', color: 'hsl(158, 36%, 37%)' }}>
+              $149.99
+              <div style={{fontSize:'15px'}}> 
+              <span style={{ textDecoration: 'line-through', marginLeft: '0.9rem', color: 'black' }}>$169.99</span>
+              </div>
+            </span>
+            <br />
+            <button style={{ height: '50px', width: '200px', backgroundColor: 'hsl(158, 36%, 37%)', color: 'white', border: 'none', borderRadius: '5px', marginLeft: '1rem' }}>
+              <img src="/images/icon-cart.svg" alt="cart" style={{ marginRight: '0.5rem' }} />
+              Add to cart
+            </button>
+          </div>
         </div>
-      </div>
     </div>
-</div>
-  )
-}
+  );
+};
 
-export default MainContainer
+export default MainContainer;
