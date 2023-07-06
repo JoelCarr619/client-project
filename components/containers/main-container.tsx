@@ -26,8 +26,8 @@ const MainContainer = () => {
           <div style={{ height: '100%' }}>
             <img src="/images/image-product-desktop.jpg" alt="Perfume" style={{ height: '100%',  borderRadius: '12px 0px 0px 12px'}} />
           </div>
-          <div style={{  display: 'flex', flexDirection: 'column', padding: '10px' }}>
-            <div style={{height: '18%', display: 'flex', alignItems:'center',border: '2px solid red' }}>
+          <div style={{  display: 'flex', flexDirection: 'column', padding: '6px' }}>
+            <div style={{height: '18%', display: 'flex', alignItems:'center',border: '2px solid red', color:'gray' }}>
             <span style={{ letterSpacing: '0.3em' }}>PERFUME</span>
             </div>
             <h1 style={{ fontSize: '39px', width: '50%', overflow: 'auto' }}>Gabrielle Essence Eau De Parfum </h1>
