@@ -15,5 +15,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@font-face {
+  font-family: 'Lobster';
+  src: url('/path/to/lobster-font-file.ttf') format('truetype');
+  /* Add other font formats if available (e.g., woff, woff2) */
+}
+
+.price {
+  font-family: 'Lobster', cursive;
+  display: flex;
+  font-size: 28px;
+  align-items: center;
+  color: hsl(158, 36%, 37%);
+}
 
 
